@@ -10,6 +10,7 @@ POST http://{{host}}:{{port}}/api/users
 Content-Type: application/json
 
 {
+
   "loginId": "test123",
   "userName": "홍길동",
   "email": "hong@example.com",
@@ -19,7 +20,9 @@ Content-Type: application/json
 }
 
 > {%
-    client.global.set("id", response.body.id)
+    if (response.status === 200) {
+        client.global.set("id", response.body.id)
+    }
 %}
 
 ### Retrieve a single user

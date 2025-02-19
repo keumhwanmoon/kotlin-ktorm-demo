@@ -1,0 +1,50 @@
+@host = localhost
+@port = 8080
+
+### Retrieve all codes
+GET http://{{host}}:{{port}}/api/codes
+Accept: application/json
+
+### Create a new code
+POST http://{{host}}:{{port}}/api/codes
+Content-Type: application/json
+
+{
+  "codeId": "TEST",
+  "parCodeId": null,
+  "codeName": "Test Code",
+  "codeValue": "TEST",
+  "codeExplanation": "This code is used for testing purposes",
+  "useYn": "Y",
+  "sortNumber": 1
+}
+
+> {%
+    console.log("response.status ::" + response.status);
+
+    if (response.status === 201) {
+        client.global.set("codeId", response.body.codeId)
+    }
+%}
+
+### Retrieve a specific code
+GET http://{{host}}:{{port}}/api/codes/{{codeId}}
+Accept: application/json
+
+### Update an existing code
+PUT http://{{host}}:{{port}}/api/codes/{{codeId}}
+Content-Type: application/json
+
+{
+  "codeId": "CODE001",
+  "parCodeId": "PAR001",
+  "codeName": "Updated Test Code",
+  "codeValue": "UPDATED_TEST",
+  "codeExplanation": "This code is updated for testing purposes",
+  "useYn": "Y",
+  "sortNumber": 2
+}
+
+### Delete a code
+DELETE http://{{host}}:{{port}}/api/codes/{{codeId}}
+Accept: application/json
