@@ -1,3 +1,16 @@
-### Retrieve list of users
+### Retrieve users list
 GET http://localhost:8080/api/users
 Accept: application/json
+
+### Create a new user
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "loginId": "test123",
+  "userName": "홍길동",
+  "email": "hong@example.com",
+  "picture": "profile.jpg",
+  "phoneNumber": "02-1234-5678",
+  "mobilePhoneNumber": "010-1234-5678"
+}

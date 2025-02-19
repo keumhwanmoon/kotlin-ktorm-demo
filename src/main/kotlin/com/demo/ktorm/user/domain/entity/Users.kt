@@ -1,6 +1,7 @@
 package com.demo.ktorm.user.domain.entity
 
 import org.ktorm.schema.Table
+import org.ktorm.schema.datetime
 import org.ktorm.schema.long
 import org.ktorm.schema.varchar
 
@@ -12,4 +13,6 @@ object Users : Table<Nothing>("USERS") {
     val phoneNumber = varchar("PHONE_NUMBER")
     val mobilePhoneNumber = varchar("MOBILE_PHONE_NUMBER")
     val email = varchar("EMAIL")
+    var createdAt = datetime("CREATED_AT")
+    var lastUpdatedAt = datetime("LAST_UPDATED_AT")
 }
