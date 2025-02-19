@@ -25,3 +25,21 @@ Content-Type: application/json
 ### Retrieve a single user
 GET http://{{host}}:{{port}}/api/users/{{id}}
 Accept: application/json
+
+### Update a single user
+PUT http://{{host}}:{{port}}/api/users/{{id}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "loginId": "updatedId123",
+  "userName": "임꺽정",
+  "email": "updated_email@example.com",
+  "picture": "updated_profile.jpg",
+  "phoneNumber": "02-9876-5432",
+  "mobilePhoneNumber": "010-9876-5432"
+}
+
+### Delete a single user
+DELETE http://{{host}}:{{port}}/api/users/{{id}}
+Accept: application/json

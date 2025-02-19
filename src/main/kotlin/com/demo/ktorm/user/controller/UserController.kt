@@ -32,7 +32,11 @@ class UserController(
      */
     @GetMapping("/api/users/{id}")
     fun getUser(@PathVariable id: Long): UserRes {
-        return userService.getUser(id)
+        try {
+            return userService.getUser(id)
+        } catch (e: IllegalArgumentException) {
+            throw e
+        }
     }
 
     /**
@@ -45,5 +49,42 @@ class UserController(
     @ResponseStatus(HttpStatus.CREATED)
     fun registerUser(@RequestBody request: UserReq): UserRes {
         return userService.createUser(request)
+    }
+
+    /**
+     * Deletes a user by their ID.
+     *
+     * @param id the ID of the user to delete.
+     */
+    @DeleteMapping("/api/users/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    fun deleteUser(@PathVariable id: Long) {
+        try {
+            userService.deleteUser(id)
+        } catch (e: IllegalArgumentException) {
+            throw e
+        }
+    }
+
+    /**
+     * Updates an existing user's information.
+     *
+     * @param id the ID of the user to update.
+     * @param request the updated user request object containing new user details.
+     * @return the updated user response object.
+     */
+    @PutMapping("/api/users/{id}")
+    fun updateUser(@PathVariable id: Long, @RequestBody request: UserReq): UserRes {
+        try {
+            return userService.updateUser(id, request)
+        } catch (e: IllegalArgumentException) {
+            throw e
+        }
+    }
+
+    @ExceptionHandler(IllegalArgumentException::class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    fun handleIllegalArgumentException(e: IllegalArgumentException): Map<String, String> {
+        return mapOf("error" to (e.message ?: "Invalid argument"))
     }
 }
