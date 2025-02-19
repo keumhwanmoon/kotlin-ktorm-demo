@@ -1,6 +1,5 @@
-package com.demo.ktorm.code.domain.entity.sequence
+package com.demo.ktorm.code.domain.entity
 
-import com.demo.ktorm.code.domain.entity.Code
 import org.ktorm.schema.Table
 import org.ktorm.schema.*
 

@@ -1,7 +1,7 @@
 package com.demo.ktorm.code.service
 
 import com.demo.ktorm.code.domain.entity.Code
-import com.demo.ktorm.code.domain.entity.sequence.Codes
+import com.demo.ktorm.code.domain.entity.Codes
 import com.demo.ktorm.code.models.CodeRes
 import com.demo.ktorm.code.models.CodeReq
 import org.ktorm.database.Database
@@ -52,7 +52,6 @@ class CodeService(
 
         codes.add(code)
         return getCode(code.codeId)
-
     }
 
     @Transactional

@@ -1,6 +1,3 @@
-@host = localhost
-@port = 8080
-
 ### Retrieve all codes
 GET http://{{host}}:{{port}}/api/codes
 Accept: application/json
@@ -37,7 +34,7 @@ Content-Type: application/json
 
 {
   "codeId": "CODE001",
-  "parCodeId": "PAR001",
+  "parCodeId": null,
   "codeName": "Updated Test Code",
   "codeValue": "UPDATED_TEST",
   "codeExplanation": "This code is updated for testing purposes",

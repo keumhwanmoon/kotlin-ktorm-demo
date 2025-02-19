@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*
  * Controller class to handle REST API endpoints for users.
  */
 @RestController
+@RequestMapping("/api/users")
 class UserController(
     private val userService: UserService
 ) {
@@ -19,7 +20,7 @@ class UserController(
      *
      * @return a list of user response objects.
      */
-    @GetMapping("/api/users")
+    @GetMapping
     fun getUsers(): List<UserRes> {
         return userService.getAllUsers()
     }
@@ -45,7 +46,7 @@ class UserController(
      * @param request the user request object containing user details.
      * @return the created user response object.
      */
-    @PostMapping("/api/users")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     fun registerUser(@RequestBody request: UserReq): UserRes {
         return userService.createUser(request)
@@ -56,7 +57,7 @@ class UserController(
      *
      * @param id the ID of the user to delete.
      */
-    @DeleteMapping("/api/users/{id}")
+    @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     fun deleteUser(@PathVariable id: Long) {
         try {
@@ -73,18 +74,12 @@ class UserController(
      * @param request the updated user request object containing new user details.
      * @return the updated user response object.
      */
-    @PutMapping("/api/users/{id}")
+    @PutMapping("/{id}")
     fun updateUser(@PathVariable id: Long, @RequestBody request: UserReq): UserRes {
         try {
             return userService.updateUser(id, request)
         } catch (e: IllegalArgumentException) {
             throw e
         }
-    }
-
-    @ExceptionHandler(IllegalArgumentException::class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    fun handleIllegalArgumentException(e: IllegalArgumentException): Map<String, String> {
-        return mapOf("error" to (e.message ?: "Invalid argument"))
     }
 }

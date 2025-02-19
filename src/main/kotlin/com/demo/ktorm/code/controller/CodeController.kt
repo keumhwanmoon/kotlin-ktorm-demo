@@ -40,10 +40,4 @@ class CodeController(
     fun deleteCode(@PathVariable codeId: String) {
         codeService.deleteCode(codeId)
     }
-
-    @ExceptionHandler(IllegalArgumentException::class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    fun handleIllegalArgumentException(e: IllegalArgumentException): Map<String, String> {
-        return mapOf("error" to (e.message ?: "Invalid argument"))
-    }
 }

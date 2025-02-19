@@ -7,10 +7,8 @@ import javax.sql.DataSource
 
 @Configuration
 class DatabaseConfig {
-
     @Bean
     fun ktormDatabase(dataSource: DataSource): Database {
         return Database.connectWithSpringSupport(dataSource)
     }
-
 }
