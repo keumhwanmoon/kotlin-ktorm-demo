@@ -1,9 +1,12 @@
+@host = localhost
+@port = 8080
+
 ### Retrieve users list
-GET http://localhost:8080/api/users
+GET http://{{host}}:{{port}}/api/users
 Accept: application/json
 
 ### Create a new user
-POST http://localhost:8080/api/users
+POST http://{{host}}:{{port}}/api/users
 Content-Type: application/json
 
 {
@@ -14,3 +17,11 @@ Content-Type: application/json
   "phoneNumber": "02-1234-5678",
   "mobilePhoneNumber": "010-1234-5678"
 }
+
+> {%
+    client.global.set("id", response.body.id)
+%}
+
+### Retrieve a single user
+GET http://{{host}}:{{port}}/api/users/{{id}}
+Accept: application/json
