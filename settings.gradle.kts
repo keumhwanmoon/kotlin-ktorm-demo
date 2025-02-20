@@ -1,1 +1,1 @@
-rootProject.name = "spring-kotlin-ktorm"
+rootProject.name = "spring-kotlin-ktorm-demo"

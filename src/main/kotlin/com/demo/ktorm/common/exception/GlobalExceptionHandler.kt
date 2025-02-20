@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ResponseStatus
 import org.springframework.web.bind.annotation.RestControllerAdvice
 
 /**
- * Application 전역에서 발생하는 IllegalArgumentException을 처리하는 class.
+ * Application 전역에서 발생하는 Exception을 처리하는 class.
  */
 @RestControllerAdvice
 class GlobalExceptionHandler {
