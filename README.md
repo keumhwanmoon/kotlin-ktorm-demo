@@ -3,7 +3,7 @@
 Spring Boot 환경에서 Kotlin ORM 프레임워크인 Ktorm의 활용 방법을 보여주는 데모 프로젝트입니다.
 Kotlin 개발자를 위한 Spring Boot 애플리케이션에서의 Ktorm 실전 활용 예제 제공이 목적입니다.
 
-## 🧑‍💻 프로젝트 소개
+## 🧑‍💻 작성자 소개
 안녕하세요! 백엔드 개발자 문금환입니다.
 코틀린과 스프링을 사랑하는 개발자이며, 더 나은 코드를 위한 고민을 계속하고 있습니다.
 궁금한 점이나 도움이 필요한 경우 언제든 연락 부탁드립니다.
@@ -11,6 +11,11 @@ Kotlin 개발자를 위한 Spring Boot 애플리케이션에서의 Ktorm 실전 
 - 이름: 문금환
 - 이메일: keumhwan.moon@gmail.com
 - GitHub: [@keumhwanmoon](https://github.com/keumhwanmoon)
+
+- 블로그:
+    - [Tistory](https://javahwan.tistory.com)
+    - [Medium](https://medium.com/@jason.moon.kr)
+    - [GitHub Pages](https://keumhwanmoon.github.io)
 
 ## ⚙️ 기술 스택
 
@@ -89,6 +94,17 @@ database.from(Users)
 database.sequenceOf(Codes)
     .sortedBy { it.sortNumber }
     .map { it.toCodeRes() }
+```
+
+## 🔍 API 테스트 가이드
+
+프로젝트의 `/http` 디렉토리에서 제공되는 HTTP 요청 파일을 통해 모든 API를 쉽게 테스트할 수 있습니다.
+
+### 📋 테스트 환경 설정
+각 HTTP 파일에서 사용되는 공통 환경 변수:
+```http
+@host = localhost    // 서버 호스트
+@port = 8080        // 서버 포트
 ```
 
 ## 🤝 프로젝트 참여
