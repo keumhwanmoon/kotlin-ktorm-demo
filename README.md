@@ -13,7 +13,7 @@ Kotlin 개발자를 위한 Spring Boot 애플리케이션에서의 Ktorm 실전 
 - GitHub: [@keumhwanmoon](https://github.com/keumhwanmoon)
 
 - 블로그:
-    - [Tistory](https://javahwan.tistory.com)
+    - [Tistory](https://jason-moon.tistory.com/)
     - [Medium](https://medium.com/@jason.moon.kr)
     - [GitHub Pages](https://keumhwanmoon.github.io)
 
