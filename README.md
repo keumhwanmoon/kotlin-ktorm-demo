@@ -114,5 +114,30 @@ database.sequenceOf(Codes)
 - 새로운 기능 제안은 Pull Request 검토 후 반영
 - 기타 문의사항은 이메일로 연락 가능
 
+## 🔗 관련 프로젝트 추천
+
+### Exposed를 활용한 유사 프로젝트
+[Springboot Kotlin Exposed Demo](https://github.com/keumhwanmoon/springboot-kotlin-exposed-demo)
+- Spring Boot와 Exposed를 활용한 데모 프로젝트
+- Ktorm 대신 Exposed를 사용하여 구현된 유사한 기능
+- 주요 차이점:
+  - Exposed의 SQL DSL 문법 활용
+  - Entity API 대신 Sequence API 사용
+  - 더 풍부한 생태계와 레퍼런스 제공
+
+#### 기능 비교
+| 기능      | 현재 프로젝트 (Ktorm)      | Exposed 프로젝트           |
+|---------|----------------------|------------------------|
+| ORM 문법  | SQL DSL + Entity API | SQL DSL + Sequence API |
+| 타입 안전성  | ✅                    | ✅                      |
+| 코틀린 친화성 | ✅                    | ✅                      |
+| 학습 곡선   | 낮음                   | 중간                     |
+| 커뮤니티 규모 | 성장중                  | 큼                      |
+
+이 두 프로젝트를 비교하면서 Kotlin ORM의 다양한 접근 방식을 학습할 수 있습니다.
+JetBrains에서 개발한 Exposed의 강력한 기능과 Ktorm의 직관적인 API를 각각 경험해보세요.
+프로젝트의 규모와 요구사항에 따라 적절한 ORM을 선택할 수 있습니다.
+
+
 ## 📝 라이선스
 본 프로젝트는 MIT 라이선스 적용. 상세 내용은 [LICENSE](LICENSE) 파일 참조.
