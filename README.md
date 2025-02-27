@@ -4,18 +4,12 @@ Spring Boot 환경에서 Kotlin ORM 프레임워크인 Ktorm의 활용 방법을
 Kotlin 개발자를 위한 Spring Boot 애플리케이션에서의 Ktorm 실전 활용 예제 제공이 목적입니다.
 
 ## 🧑‍💻 작성자 소개
-안녕하세요! 백엔드 개발자 문금환입니다.
-코틀린과 스프링을 사랑하는 개발자이며, 더 나은 코드를 위한 고민을 계속하고 있습니다.
-궁금한 점이나 도움이 필요한 경우 언제든 연락 부탁드립니다.
 
-- 이름: 문금환
-- 이메일: keumhwan.moon@gmail.com
-- GitHub: [@keumhwanmoon](https://github.com/keumhwanmoon)
+안녕하세요! 15년차 백엔드 개발자 문금환입니다.
+현재 프리랜서로 활동하고 있으며, 코틀린과 스프링을 주력으로 사용하고 있습니다.
+더 나은 코드를 위해 항상 고민하고 새로운 기술을 탐구하는 것을 즐깁니다.
 
-- 블로그:
-    - [Tistory](https://jason-moon.tistory.com/)
-    - [Medium](https://medium.com/@jason.moon.kr)
-    - [GitHub Pages](https://keumhwanmoon.github.io)
+궁금하신 점이나 협업 제안이 있으시다면 언제든 연락 주세요.
 
 ## ⚙️ 기술 스택
 
