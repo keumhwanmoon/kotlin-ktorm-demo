@@ -11,6 +11,15 @@ Kotlin 개발자를 위한 Spring Boot 애플리케이션에서의 Ktorm 실전 
 
 궁금하신 점이나 협업 제안이 있으시다면 언제든 연락 주세요.
 
+### 연락처
+- 이메일: keumhwan.moon@gmail.com
+- GitHub: [@keumhwanmoon](https://github.com/keumhwanmoon)
+
+### 기술 블로그
+- [Tistory](https://jason-moon.tistory.com/)
+- [Medium](https://medium.com/@jason.moon.kr)
+- [GitHub Pages](https://keumhwanmoon.github.io)
+
 ## ⚙️ 기술 스택
 
 - Kotlin 1.9.21
